@@ -87,7 +87,7 @@ echo "font packages installed" | indent
 
 #version 0.10.0 - wkhtmltopdf-0.10.0_rc2-static-amd64.tar.bz2
 echo "-----> Installing wkhtmltopdf"
-cd $BUILDPACK_DIR/bin/wkhtmltopdf/
+cd $BUILDPACK_DIR/bin/
 mv wkhtmltopdf $BUILD_DIR/.root/bin/wkhtmltopdf
 echo "wkhtmltopdf installed" | indent
 
