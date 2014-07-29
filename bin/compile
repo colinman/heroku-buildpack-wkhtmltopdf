@@ -85,11 +85,10 @@ rm -f $BUILD_DIR/.root/tmp/*
 fakechroot fakeroot chroot $BUILD_DIR/.root fc-cache -f >/dev/null 2>&1
 echo "font packages installed" | indent
 
+#version 0.10.0 - wkhtmltopdf-0.10.0_rc2-static-amd64.tar.bz2
 echo "-----> Installing wkhtmltopdf"
-cd $CACHE_DIR/.tools/wkhtmltopdf/
-curl -O https://wkhtmltopdf.googlecode.com/files/wkhtmltopdf-0.11.0_rc1-static-amd64.tar.bz2 >/dev/null 2>&1
-tar -xjf wkhtmltopdf-0.11.0_rc1-static-amd64.tar.bz2 >/dev/null 2>&1
-mv wkhtmltopdf-amd64 $BUILD_DIR/.root/bin/wkhtmltopdf
+cd $BUILDPACK_DIR/bin/wkhtmltopdf/
+mv wkhtmltopdf $BUILD_DIR/.root/bin/wkhtmltopdf
 echo "wkhtmltopdf installed" | indent
 
 cd $BUILD_DIR/.root
