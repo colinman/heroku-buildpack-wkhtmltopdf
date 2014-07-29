@@ -40,7 +40,7 @@ echo "wget installed" | indent
 
 echo "-----> Fetching and installing debootstrap"
 cd $DEBOOTSTRAP_BUILD
-curl -O http://archive.ubuntu.com/ubuntu/pool/main/d/debootstrap/debootstrap_1.0.56.tar.gz >/dev/null 2>&1
+curl -O http://archive.ubuntu.com/ubuntu/pool/main/d/debootstrap/debootstrap_1.0.59ubuntu1.tar.gz >/dev/null 2>&1
 tar zxvf debootstrap_1.0.56.tar.gz >/dev/null 2>&1
 cd debootstrap-1.0.56
 DESTDIR=$CACHE_DIR/.tools/debootstrap fakeroot make >/dev/null 2>&1
